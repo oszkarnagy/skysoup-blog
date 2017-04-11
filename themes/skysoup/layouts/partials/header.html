@@ -8,18 +8,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="referrer" content="no-referrer">
 
-	<title>
-	{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
-	{{ if eq $url "" }}
-	    {{ .Site.Title }}
-	{{ else }}
-	    {{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Site.Title }} {{ end }}
-	{{ end }}
-	</title>
+	<title>Skysoup</title>
 	<link rel="canonical" href="{{ .Permalink }}">
 
 	<link rel="stylesheet" type="text/css" href="/css/normalise.typebase.css">
 	<link rel="stylesheet" type="text/css" href="/css/skysoup-main.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Cormorant+Garamond|Playfair+Display:900" rel="stylesheet">
 
 </head>
 
