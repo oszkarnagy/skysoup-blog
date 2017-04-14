@@ -1,15 +1,25 @@
 {{ partial "header.html" . }}
 
-{{ if .Params.image }}
-<section class="post-hero-image">
-    <img src="{{ .Params.image }}" alt="{{ .Title }}" />
-</section>
-{{ end }}
-
 <section class="main">
 	<article class="post">
-  		<h1>{{ .Title }}</h1> 
-  		{{ .Content }} 
+  		
+  		<header>
+  			<h1 class="post-title">{{ .Title }}</h1>
+
+  			<p class="post-details">
+  				{{ .PublishDate.Format "2 Jan, 2006" }} &mdash; {{ .ReadingTime }} minutes
+  			</p>
+  			
+  		</header>
+
+  		<div class="post-content">
+  			{{ .Content }} 
+  		</div>
+
+  		<div class="post-footer">
+
+  		</div>
+
 	</article>
 </section>
 
