@@ -1,11 +1,11 @@
 +++
-title = "Hello world!"
+title = "Knitting in the age of post-global sausage smoking"
 image = "http://images.metmuseum.org/CRDImages/ma/web-large/ma1982.179.29.jpg"
 date = "2017-04-10T22:09:08+12:00"
 +++
 
 <p class="post-outline">
-Here is an outline of the article. Paragraphs can be written like so. A paragraph is the basic block of Markdown. A paragraph is what text will turn into when there is no reason it should become anything else.
+Here is an outline of the article. A paragraph is what text will turn into when there is no reason it should become anything else.
 </p>
 
 <!--more-->

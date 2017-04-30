@@ -1,13 +1,13 @@
 {{ partial "header.html" . }}
 
-<section class="main">
+<section class="post-container">
 	<article class="post">
   		
   		<header>
   			<h1 class="post-title">{{ .Title }}</h1>
 
   			<p class="post-details">
-  				{{ .PublishDate.Format "2 Jan, 2006" }} &mdash; {{ .ReadingTime }} minutes
+  				{{ .Date.Format "2 Jan, 2006" }} &mdash; {{ .ReadingTime }} minutes
   			</p>
   			
   		</header>
