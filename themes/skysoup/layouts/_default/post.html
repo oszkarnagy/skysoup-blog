@@ -4,35 +4,31 @@
         
     
     <section class="page-sidebar">
+
         {{ partial "menu.html" . }}
+
     </section>
 
 
     <section class="page-main">
 
         <header>
-            <h1 class="site-title">{{ .Site.Title }}</h1>
-            
+            <h1>All articles</h1>
         </header>
 
-        <h2 class="page-section">Latest posts</h1>
-
         <div class="post-list">
-            {{ range first 3 .Data.Pages.ByPublishDate }}
+            {{ range .Data.Pages }}
             {{ if eq .Type "post"}}
               <div class="post-item">
-                
-                <!-- <img src="{{ .Params.image }}" alt="{{ .Title }}" class="proc-img card-item-image" /> -->
-                <h3 class="post-item-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-                
+                <a href="{{ .Permalink }}">
+                    <h2 class="post-item-title">{{ .Title }}</h2>
+                </a>
                 <div class="post-item-summary">{{ .Summary }}</div>
                 <div class="post-item-details">{{ .Date.Format "2 Jan, 2006" }} &mdash; {{ .ReadingTime }} minutes</div>
               </div>
             {{ end }}
             {{ end }}
         </div>
-
-        <a href="/post/">View all articles</a>
 
     </section>
 

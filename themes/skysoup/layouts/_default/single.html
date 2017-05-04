@@ -1,8 +1,35 @@
 {{ partial "header.html" . }}
 
-<article>
-  <h1>{{ .Title }}</h1> 
-  {{ .Content }} 
-</article>
+<div class="page-container">
+  
+  <section class="page-sidebar">
 
+    {{ partial "menu.html" . }}
+
+  </section>
+
+
+  <section class="page-main">
+  	<article class="post">
+    		
+    		<header>
+    			<h1 class="post-title">{{ .Title }}</h1>
+
+    			<p class="post-details">
+    				{{ .Date.Format "2 Jan, 2006" }} &mdash; {{ .ReadingTime }} minutes
+    			</p>
+    			
+    		</header>
+
+    		<div class="post-content">
+    			{{ .Content }} 
+    		</div>
+
+    		<div class="post-footer">
+
+    		</div>
+
+  	</article>
+  </section>
+</div>
 {{ partial "footer.html" . }}
