@@ -3,34 +3,7 @@
 <div class="page-container">
         
     
-    <section class="page-sidebar">
-
-        {{ partial "menu.html" . }}
-
-    </section>
-
-
-    <section class="page-main">
-
-        <header>
-            <h1>All articles</h1>
-        </header>
-
-        <div class="post-list">
-            {{ range .Data.Pages }}
-            {{ if eq .Type "post"}}
-              <div class="post-item">
-                <a href="{{ .Permalink }}">
-                    <h2 class="post-item-title">{{ .Title }}</h2>
-                </a>
-                <div class="post-item-summary">{{ .Summary }}</div>
-                <div class="post-item-details">{{ .Date.Format "2 Jan, 2006" }} &mdash; {{ .ReadingTime }} minutes</div>
-              </div>
-            {{ end }}
-            {{ end }}
-        </div>
-
-    </section>
+Post / post
 
 </div>
 

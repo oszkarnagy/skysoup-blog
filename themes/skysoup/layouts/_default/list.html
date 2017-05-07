@@ -1,0 +1,34 @@
+{{ partial "header.html" . }}
+    
+<div class="page-container">
+        
+    
+    <section class="page-sidebar">
+        {{ partial "menu.html" . }}
+    </section>
+
+
+    <section class="page-main">
+
+        <h1 class="">All articles</h1>
+
+        <ul class="post-list">
+            {{ range .Data.Pages.ByPublishDate }}
+            {{ if eq .Type "post"}}
+              <li class="post-list-item">
+                
+                <!-- <img src="{{ .Params.image }}" alt="{{ .Title }}" class="proc-img card-item-image" /> -->
+                <h3><a class="post-list-item-title" href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                
+                <div class="post-list-item-summary">{{ .Summary }}</div>
+                <div class="post-list-item-details">{{ .Date.Format "2 Jan, 2006" }} &mdash; {{ .ReadingTime }} minutes</div>
+              </li>
+            {{ end }}
+            {{ end }}
+        </ul>
+
+    </section>
+
+</div>
+
+{{ partial "footer.html" . }}
